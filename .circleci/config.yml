@@ -33,6 +33,7 @@ jobs:
       - run:
           name: Run playbook and comfigure server
           command: |
+              aws iam list-users
               ansible-playbook -i inventory main-remote.yml
 
 # Invoke jobs via workflows
